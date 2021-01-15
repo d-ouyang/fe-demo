@@ -1,0 +1,38 @@
+{
+  "name": "fe-demor",
+  "version": "1.0.0",
+  "description": "a fe-demo",
+  "main": "main.js",
+  "dependencies": {
+    "uview-ui": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.17.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-vue": "^7.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-fix": "node_modules/.bin/eslint --fix --ext .js --ext .vue ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-ouyang/fe-demo.git"
+  },
+  "keywords": [
+    "fe",
+    "小程序",
+    "前端",
+    "demo",
+    "vue",
+    "js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d-ouyang/fe-demo/issues"
+  },
+  "homepage": "https://github.com/d-ouyang/fe-demo#readme"
+}
