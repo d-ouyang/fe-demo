@@ -1,50 +1,39 @@
 <template>
 	<view class="container">
-		<u-swiper :list="list" :effect3d="true"></u-swiper>
+		<u-swiper :list="list" title :effect3d="true" @click="onClickSwiperItem"></u-swiper>
 	</view>
 </template>
 
 <script>
-	import hotList from './demo.hot.js'
+	import Mock from 'mockjs'
 	export default {
 		data() {
 			return {
-				list: hotList
+				loading: true,
+				list: []
 			}
 		},
-		onLoad() {
-
+		async onLoad() {
+			Promise.all([
+				this.getHotList()
+			])
+			setTimeout(() => {
+				this.loading = false
+			}, 2000)
 		},
 		methods: {
-
+			onClickSwiperItem(e) {
+				const current = this.list[e]
+				console.log(current)
+			},
+			async getHotList() {
+				const list = await this.$mock.getHotList()
+				console.log(list)
+				this.list = list
+			}
 		}
 	}
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
 </style>

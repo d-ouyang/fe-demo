@@ -8,4 +8,4 @@ export default [{
 	click: 0,
 	share: 0,
 	path: ''
-}]
+}];

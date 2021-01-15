@@ -4,6 +4,7 @@
   "description": "a fe-demo",
   "main": "main.js",
   "dependencies": {
+    "mockjs": "^1.1.0",
     "uview-ui": "^1.8.3"
   },
   "devDependencies": {
